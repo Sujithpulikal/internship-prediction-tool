@@ -101,7 +101,7 @@ def register():
         predict_list=[age,course_encoded,leadsource_encoded,totalvisit,timespentonwebsite,lastactivity_encoded,
                       country_encoded,city_encoded,occupation_encoded,tags_encoded,leadquality_encoded,
                       pageviewpervisit,preferedcontactmethod_encoded,engagementscore,qualification_encoded,leadinterstlevel,
-                      contactedhour,daysincepastinteraction,coursefee,potentialscore,interactiontime,leadvsquality]
+                      contactedhour,daysincepastinteraction,coursefee,potentialscore]
         prediction = model.predict([predict_list])
         y=int(prediction)
         return render_template('confirm.html', a=name,b=age,c=course,d=leadsource,e=totalvisit,f=timespentonwebsite,g=lastactivity,

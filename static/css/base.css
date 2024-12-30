@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 10%;
+  z-index: 1;
+  background-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Navbar Brand: Align to the left */
+.navbar-brand {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 2%;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 16px; /* Slight margin to align */
+}
+
+/* Centered Content */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navbar Links: Align to the right */
+.navbar-links {
+  display: flex;
+  gap: 16px; /* Space between links */
+  margin-right: 16px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding-top: 2%;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand,
+  .navbar-center,
+  .navbar-links {
+    position: static;
+    transform: none;
+    margin: 8px 0;
+  }
+}
+
+
+/* Main Content */
+.main-content {
+  margin-top: 30px; /* Adjust for navbar height */
+  padding: 16px;
+  min-height: calc(100vh - 160px); /* Subtract navbar and footer height */
+  box-sizing: border-box;
+}
+
+/* Footer */
+.footer {
+  position: relative; /* Changed to relative to avoid overlap */
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  padding: 16px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-button {
+  color: black;
+  background-color: lightgrey;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.footer-icons i {
+  margin: 0 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.footer-icons i:hover {
+  opacity: 0.7;
+}
+
+.footer-text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}

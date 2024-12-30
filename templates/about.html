@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title%}Lead{% endblock %}
+
+{% block content%}
+<!-- Team Container -->
+<link href="{{ url_for('static',filename='css/about.css')}}" rel="stylesheet"/>
+<div class="team-container" id="team">
+    <h2>OUR TEAM</h2>
+    <p>Say hello to the crew - the engine behind our projects!</p>
+
+    <!-- Row 1: 4 Images -->
+    <div class="team-row">
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 1" class="team-img">
+            <h3>Chinju</h3>
+            <p>Team-member</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 2" class="team-img">
+            <h3>Savidh</h3>
+            <p>Team-member</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 3" class="team-img">
+            <h3>Sujith</h3>
+            <p>Group-lead</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 4" class="team-img">
+            <h3>Vasudev</h3>
+            <p>Team-member</p>
+        </div>
+    </div>
+
+    <!-- Row 2: 3 Images -->
+    <div class="team-row">
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 5" class="team-img">
+            <h3>Aiswarya</h3>
+            <p>Team-member</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 6" class="team-img">
+            <h3>Akash</h3>
+            <p>Team-member</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 7" class="team-img">
+            <h3>Keerthana</h3>
+            <p>Group-lead</p>
+        </div>
+    </div>
+
+    <!-- Row 3: 3 Images -->
+    <div class="team-row">
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 8" class="team-img">
+            <h3>Abhishek</h3>
+            <p>Group-lead</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 9" class="team-img">
+            <h3>Abhaya</h3>
+            <p>Team-member</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/propic.jpg') }}" alt="Member 10" class="team-img">
+            <h3>Tony</h3>
+            <p>Team-member</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

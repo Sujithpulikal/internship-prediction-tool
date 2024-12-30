@@ -1,0 +1,49 @@
+.team-container {
+    padding: 64px;
+    text-align: center;
+}
+
+.team-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.team-container p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Team Row */
+.team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Team Member */
+.team-member {
+    width: 22%; /* Adjust to control the size */
+    text-align: center;
+    margin: 10px;
+}
+
+.team-img {
+    width: 60%; /* Adjust to match preferred image size */
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.team-img:hover {
+    opacity: 0.7;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #555;
+}

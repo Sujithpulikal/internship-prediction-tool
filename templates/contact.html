@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}contact{% endblock %}
+
+{% block content%}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact.css')}}">
+<div class="contact-container" id="contact">
+    <h3 class="contact-title">CONTACT</h3>
+    <p class="contact-subtitle">Let's get in touch. Send us a message:</p>
+    <div class="contact-details">
+      <p><i class="fa fa-map-marker"></i> Kochi, India</p>
+      <p><i class="fa fa-phone"></i> Phone: +12334456</p>
+      <p><i class="fa fa-envelope"></i> Email: mail@mail.com</p>
+    </div>
+    
+    <!-- Contact Form -->
+    <form action="/action_page.php" method="post" target="_blank" class="contact-form">
+      <input class="form-input" type="text" placeholder="Name" required name="Name">
+      <input class="form-input" type="email" placeholder="Email" required name="Email">
+      <input class="form-input" type="text" placeholder="Subject" required name="Subject">
+      <textarea class="form-input" placeholder="Message" required name="Message" rows="5"></textarea>
+      <button class="form-button" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+{% endblock %}

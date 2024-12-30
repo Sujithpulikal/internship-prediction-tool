@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title%}Home{% endblock %}
+
+{% block content%}
+<link href="{{ url_for('static',filename='css/home.css')}}" rel="stylesheet"/>
+<main class="homepage-content">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-quote">
+      <blockquote>
+        "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." 
+        <cite>– Albert Schweitzer</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-item">
+      <h2>Intern Placement</h2>
+      <p>Find the perfect placement opportunities for interns. Optimize career paths and deliver exceptional training and mentorship.</p>
+      <a href="{{ url_for('placement') }}" class="learn-more">Learn More</a>
+    </div>
+
+    <div class="feature-item">
+      <h2>Lead Conversion</h2>
+      <p>Convert leads into actionable business results. Leverage data-driven strategies to maximize your conversion rates.</p>
+      <a href="{{ url_for('lead') }}" class="learn-more">Learn More</a>
+    </div>
+
+    <div class="feature-item">
+      <h2>Intern Attrition</h2>
+      <p>Analyze and address intern attrition trends. Improve retention rates by identifying key engagement and satisfaction factors.</p>
+      <a href="{{ url_for('attrition') }}" class="learn-more">Learn More</a>
+    </div>
+  </section>
+</main>
+
+
+{% endblock %}

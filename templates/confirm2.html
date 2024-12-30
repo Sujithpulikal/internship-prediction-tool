@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title%}Placement prediction{% endblock %}
+
+{% block content%}
+
+
+<link href="{{ url_for('static',filename='css/styles.css')}}" rel="stylesheet"/>
+<header class="bgimg-2" style="padding-top: 5%;" id="home">
+<div style="padding-top: 3%;" class="f">
+<center><h3>Placement prediction</h3></center>
+    <table >
+        <tr><td>Name</td><td>{{ a }}</td></tr>
+        <tr><td>Age</td><td>{{ b }}</td></tr>
+        <tr><td>Department</td><td>{{ c }}</td></tr>
+        <tr><td>Duration of Internship</td><td>{{ d }}</td></tr>
+        <tr><td>Performance Score</td><td>{{ e }}</td></tr>
+        <tr><td>Attendance</td><td>{{ f }}</td></tr>
+        <tr><td>Socioeconomic Status</td><td>{{ g }}</td></tr>
+        <tr><td>Participation in projects</td><td>{{ h }}</td></tr>
+        <tr><td>Tech Skill Rating</td><td>{{ i }}</td></tr>
+        <tr><td>Soft skill Rating</td><td>{{ j }}</td></tr>
+        <tr><td>Hours Worked per Week</td><td>{{ k }}</td></tr>
+        <tr><td>Mentorship Level</td><td>{{ l }}</td></tr>
+        <tr><td>Distance from Work (miles)</td><td>{{ m }}</td></tr>
+        <tr><td>Recommendation Score</td><td>{{ n }}</td></tr>
+        <tr><td>Skill Composite Score</td><td>{{ o }}</td></tr>
+        <tr><td>Performance-Project Interaction</td><td>{{ p }}</td></tr>
+        <tr><td>Placement Likelihood Index</td><td>{{ q }}</td></tr>
+        <tr><td>Socioeconomic-Engagement Interaction:</td><td>{{ r }}</td></tr>
+        <tr><td>Placement Status:</td><td>{{ s }}</td></tr>
+    </table>
+</div>
+</header>
+    {% endblock %}

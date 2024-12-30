@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title%}Attrition{% endblock %}
+
+{% block content%}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/attrition.css')}}">
+<header class="bgimg-1" style="padding-top: 3%;padding-bottom: 3%;" id="home">
+<div class="container">
+    <h2>Attrition Data Form</h2>
+    <form action="/confirm1" method="POST">
+      <div class="form-group">
+        <label for="intern_name">Intern Name:</label>
+        <input type="text" id="intern_name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select name="department" id="department" required>
+            <option value="">Select department</option>
+            <option value="Human Resources">Human Resources</option>
+            <option value="Finance">Finance</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Marketing">Marketing</option>
+        </select><br>
+    </div>
+    
+      <div class="form-group">
+        <label for="duration">Duration of Internship (months):</label>
+        <input type="number" id="duration" name="duration" required>
+      </div>
+      <div class="form-group">
+        <label for="performance_score">Performance Score:</label>
+        <input type="number" step="0.01" id="performance_score" name="performance_score" required>
+      </div>
+      <div class="form-group">
+        <label for="attendance_rate">Attendance Rate (%):</label>
+        <input type="number" step="0.01" id="attendance_rate" name="attendance_rate" required>
+      </div>
+      <div class="form-group">
+        <label for="socio_status">Socioeconomic Status:</label>
+        <select id="socio_status" name="socio_status" required>
+            <option value="">Select Socioeconomic Status</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+        </select><br><br>
+    </div>
+      <div class="form-group">
+        <label for="projects">Participation in Projects:</label>
+        <select id="projects" name="projects" required>
+          <option value="">Select Participation in Projects</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="hours_worked">Hours Worked per Week:</label>
+        <input type="number" id="hours_worked" name="hours_worked" required>
+      </div>
+      <div class="form-group">
+        <label for="mentorship">Mentorship Level:</label>
+        <select id="mentorship" name="mentorship" required>
+            <option value="">Select Mentorship Level</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+        </select><br><br>
+    </div>
+      <div class="form-group">
+        <label for="distance">Distance from Work (miles):</label>
+        <input type="number" step="0.01" id="distance" name="distance" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="job_satisfaction">Job Satisfaction:</label>
+        <select id="job_satisfaction" name="job_satisfaction" required>
+            <option value="">Select Job Satisfaction</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+        </select><br><br>
+    </div>
+      <div class="form-group">
+        <label for="worklife_index">Work-Life Balance Index:</label>
+        <input type="number" step="0.01" id="worklife_index" name="worklife_index" required>
+      </div>
+      <div class="form-group">
+        <label for="performance_adjusted">Performance Adjusted Score:</label>
+        <input type="number" step="0.01" id="performance_adjusted" name="performance_adjusted" required>
+      </div>
+      <div class="form-group">
+        <label for="engagement">Engagement Level:</label>
+        <input type="number" step="0.01" id="engagement" name="engagement" required>
+      </div>
+      <div class="form-group">
+        <label for="socio_perf">Socioeconomic-Performance Interaction:</label>
+        <input type="number" step="0.01" id="socio_perf" name="socio_perf" required>
+      </div>
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </div>
+</header>
+{% endblock %}

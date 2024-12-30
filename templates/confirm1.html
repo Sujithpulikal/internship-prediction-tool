@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title%}Intern attrition prediction{% endblock %}
+
+{% block content%}
+
+
+<link href="{{ url_for('static',filename='css/styles.css')}}" rel="stylesheet"/>
+<header class="bgimg-1 " style="padding-top: 5%;"id="home">
+<div style="padding-top: 3%;" class="f">
+<center><h3>Intern attrition prediction</h3></center>
+    <table >
+        <tr><td>Name</td><td>{{ a }}</td></tr>
+        <tr><td>Age</td><td>{{ b }}</td></tr>
+        <tr><td>Department</td><td>{{ c }}</td></tr>
+        <tr><td>Duration of Internship</td><td>{{ d }}</td></tr>
+        <tr><td>Performance Score</td><td>{{ e }}</td></tr>
+        <tr><td>Attendance</td><td>{{ f }}</td></tr>
+        <tr><td>Socioeconomic Status</td><td>{{ g }}</td></tr>
+        <tr><td>Participation in projects</td><td>{{ h }}</td></tr>
+        <tr><td>hours_worked per week</td><td>{{ i }}</td></tr>
+        <tr><td>Mentorship Level</td><td>{{ j }}</td></tr>
+        <tr><td>Distance from work</td><td>{{ k }}</td></tr>
+        <tr><td>job_satisfaction</td><td>{{ l }}</td></tr>
+        <tr><td>worklife_index</td><td>{{ m }}</td></tr>
+        <tr><td>performance_adjusted score</td><td>{{ n }}</td></tr>
+        <tr><td>Engagement Level</td><td>{{ o }}</td></tr>
+        <tr><td>Socioeconomic-performance Interaction</td><td>{{ p }}</td></tr>
+        <tr><td>Attrition</td><td>{{q }}</td></tr>
+    </table>
+</div>
+</header>
+    {% endblock %}

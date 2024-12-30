@@ -1,0 +1,110 @@
+/* General Contact Section */
+.contact-container {
+    background-color: #f1f1f1; /* Light grey background */
+    padding: 50px 16px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .contact-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .contact-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  /* Contact Details */
+  .contact-details {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    color: #444;
+    font-size: 16px;
+  }
+  
+  .contact-details p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-details i {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  textarea.form-input {
+    resize: vertical;
+  }
+  
+  .form-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button i {
+    margin-right: 8px;
+  }
+  
+  .form-button:hover {
+    background-color: #444;
+  }
+  
+  /* Map Section */
+  .contact-map {
+    margin-top: 48px;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+    filter: grayscale(70%);
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-details {
+      text-align: center;
+    }
+    
+    .contact-details p {
+      justify-content: center;
+    }
+    
+    .contact-form {
+      padding: 0 16px;
+    }
+  }
+  

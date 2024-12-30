@@ -1,4 +1,5 @@
 from flask import Flask,  request ,render_template
+import math
 import pickle
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
@@ -55,9 +56,9 @@ def register():
         daysincepastinteraction=int(request.form.get('Dsli'))
         coursefee=float(request.form.get('Cfo'))
         potentialscore=int(request.form.get('Ps'))
-        logtime=float(request.form.get('Lsw'))
-        interactiontime=int(request.form.get('Ith'))
-        leadvsquality=int(request.form.get('Ivsq'))
+        logtime=round(math.log(timespentonwebsite),6)
+        interactiontime=timespentonwebsite*contactedhour
+        
 
         
         fields = {
@@ -87,6 +88,13 @@ def register():
         qualification_encoded = encoded_values["Qualification"]
         country_encoded = encoded_values["co"]
         city_encoded = encoded_values["co1"]
+        if leadquality_encoded==0:
+            leadvsquality=3*leadinterstlevel
+        elif leadquality_encoded==1:
+            leadvsquality=1*leadinterstlevel
+        else:
+            leadvsquality=2*leadinterstlevel
+
         predict_list=[age,course_encoded,leadsource_encoded,totalvisit,timespentonwebsite,lastactivity_encoded,
                       country_encoded,city_encoded,occupation_encoded,tags_encoded,leadquality_encoded,
                       pageviewpervisit,preferedcontactmethod_encoded,engagementscore,qualification_encoded,leadinterstlevel,

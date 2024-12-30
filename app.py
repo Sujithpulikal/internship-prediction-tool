@@ -126,7 +126,7 @@ def register1():
         worklife_index = float(request.form.get('worklife_index'))
         performance_adjusted = float(request.form.get('performance_adjusted'))
         engagement = float(request.form.get('engagement'))
-        socio_perf = float(request.form.get('socio_perf'))
+        
 
         fields2 = {
         'Department':department,
@@ -146,6 +146,13 @@ def register1():
         mentorship_encoded=encoded_values2['Mentorship Level']
         projects_encoded=encoded_values2['Participation in Projects']
         job_satisfaction_encoded=encoded_values2['Job Satisfaction']
+
+        if socio_status_encoded==0:
+            socio_perf = 3*performance_score
+        elif socio_status_encoded==1:
+            socio_perf=1*performance_score
+        else:
+            socio_perf=2*performance_score
 
         predict_list2=[age,department_encoded,duration,performance_score,attendance_rate,socio_status_encoded,projects_encoded
                       ,hours_worked,mentorship_encoded,distance,job_satisfaction_encoded,worklife_index,engagement]
@@ -183,10 +190,11 @@ def register2():
         mentorship1 = request.form.get('mentorship1')
         distance1 = float(request.form.get('distance1'))
         recommendscore = int(request.form.get('recommendation_score'))
-        skillcomposite = float(request.form.get('skill_composite'))
-        performpjt = float(request.form.get('performance_project'))
+        skillcomposite = round((0.7*tech)+(0.3*soft),3)
+        performpjt = performance_score1*projects1
         placementindex = float(request.form.get('placement_likelihood'))
-        socioengmnt = float(request.form.get('socio_engagement'))
+
+        
 
         fields1 = {
             "Department": department1,
@@ -201,6 +209,13 @@ def register2():
         dept_encoded = encoded_values1["Department"]
         socio_status1_encoded = encoded_values1["Socioeconomic Status"]
         mentorship1_encoded = encoded_values1["Mentorship Level"]
+
+        if socio_status1_encoded==0:
+            socioengmnt= round(3*attendance_rate1,3)
+        elif socio_status1_encoded==1:
+            socioengmnt=round(1*attendance_rate1,3)
+        else:
+            socioengmnt=round(2*attendance_rate1,3)
 
         predict_list1=[age1,dept_encoded,duration1,performance_score1,attendance_rate1,socio_status1_encoded,
                       projects1,tech,soft,hours_worked1,mentorship1_encoded,distance1,recommendscore,performpjt,placementindex,socioengmnt

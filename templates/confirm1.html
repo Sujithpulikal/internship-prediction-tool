@@ -7,6 +7,22 @@
 
 <link href="{{ url_for('static',filename='css/styles.css')}}" rel="stylesheet"/>
 <header class="bgimg-1 " style="padding-top: 5%;"id="home">
+    <div class="popup" class="d1">
+        <button class="button1"id="close">&times;</button>
+        <h2>Intern attrition prediction</h2>
+        <p class="p1">
+            
+            {% if q == 1 %}
+            <p class="success">{{ a }} has successfully converted with the {{ c }} course.</p>
+        {% else %}
+        <p class="failure">{{ a }} has not been converted with the {{ c }} course.</p>
+        {% endif %}
+        </p>
+        <button class="button2" id="close1">Let's Go</button>
+        
+    </div>
+    <!--Script-->
+    <script src="{{ url_for('static',filename='js/script.js')}}"></script>
 <div style="padding-top: 3%;" class="f">
 <center><h3>Intern attrition prediction</h3></center>
     <table >

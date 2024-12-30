@@ -8,6 +8,22 @@
 <link href="{{ url_for('static',filename='css/styles.css')}}" rel="stylesheet"/>
 <header class="bgimg-2" style="padding-top: 5%;" id="home">
 <div style="padding-top: 3%;" class="f">
+    <div class="popup" class="d1">
+        <button class="button1"id="close">&times;</button>
+        <h2>Placement prediction</h2>
+        <p class="p1">
+            
+            {% if s == 1 %}
+            <p class="success">{{ a }} has successfully converted with the {{ c }} course.</p>
+        {% else %}
+        <p class="failure">{{ a }} has not been converted with the {{ c }} course.</p>
+        {% endif %}
+        </p>
+        <button class="button2" id="close1">Let's Go</button>
+        
+    </div>
+    <!--Script-->
+    <script src="{{ url_for('static',filename='js/script.js')}}"></script>
 <center><h3>Placement prediction</h3></center>
     <table >
         <tr><td>Name</td><td>{{ a }}</td></tr>

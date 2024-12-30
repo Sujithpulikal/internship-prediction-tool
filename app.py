@@ -218,7 +218,8 @@ def register2():
             socioengmnt=round(2*attendance_rate1,3)
 
         predict_list1=[age1,dept_encoded,duration1,performance_score1,attendance_rate1,socio_status1_encoded,
-                      projects1,tech,soft,hours_worked1,mentorship1_encoded,distance1,recommendscore,performpjt,placementindex,socioengmnt
+                      projects1,tech,soft,hours_worked1,mentorship1_encoded,distance1,recommendscore,performpjt,placementindex,
+                      socioengmnt
                       ]
         prediction1 = model1.predict([predict_list1])
 

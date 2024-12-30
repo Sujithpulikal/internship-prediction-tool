@@ -158,5 +158,51 @@ def register1():
 
     return render_template('attrition.html')
 
+@app.route('/confirm2', methods=['POST', 'GET'])
+def register2():
+    if request.method == "POST":
+        name1 = request.form.get('name1')
+        age1 = int(request.form.get('age1'))
+        department1 = request.form.get('department1')
+        duration1= int(request.form.get('duration1'))
+        performance_score1 = float(request.form.get('performance_score1'))
+        attendance_rate1 = float(request.form.get('attendance_rate1'))
+        socio_status1 = request.form.get('socio_status1')
+        projects1 = int(request.form.get('projects1'))
+        tech = float(request.form.get('tech_skill'))
+        soft = float(request.form.get('soft_skill'))
+        hours_worked1 = int(request.form.get('hours_worked1'))
+        mentorship1 = request.form.get('mentorship1')
+        distance1 = float(request.form.get('distance1'))
+        recommendscore = int(request.form.get('recommendation_score'))
+        skillcomposite = float(request.form.get('skill_composite'))
+        performpjt = float(request.form.get('performance_project'))
+        placementindex = float(request.form.get('placement_likelihood'))
+        socioengmnt = float(request.form.get('socio_engagement'))
+
+        fields1 = {
+            "Department": department1,
+            "Socioeconomic Status": socio_status1,
+            "Mentorship Level": mentorship1
+        }
+
+        encoded_values1 = {}
+        for field, value in fields1.items():
+            encoded_values1[field] = int(encoders1[field].transform([value]))
+
+        dept_encoded = encoded_values1["Department"]
+        socio_status1_encoded = encoded_values1["Socioeconomic Status"]
+        mentorship1_encoded = encoded_values1["Mentorship Level"]
+
+        predict_list1=[age1,dept_encoded,duration1,performance_score1,attendance_rate1,socio_status1_encoded,
+                      projects1,tech,soft,hours_worked1,mentorship1_encoded,distance1,recommendscore,performpjt,placementindex,socioengmnt
+                      ]
+        prediction1 = model1.predict([predict_list1])
+
+        return render_template('confirm2.html', a=name1,b=age1,c=department1,d=duration1,e=performance_score1,
+                               f=attendance_rate1,g=socio_status1,
+                               h=projects1,i=tech,j=soft,k=hours_worked1,l=mentorship1,m=distance1,
+                               n=recommendscore,o=skillcomposite,p=performpjt,q=placementindex,r=socioengmnt,s=int(prediction1))
+
 if __name__ == "__main__":
     app.run(debug=True)

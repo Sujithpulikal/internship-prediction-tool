@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Lead{% endblock %}
+
+{% block content %}
+<link href="{{ url_for('static', filename='css/about1.css') }}" rel="stylesheet" />
+<header class="bgimg-1" style="padding-top: 3%;padding-bottom: 3%;" id="home">
+<div id="main">
+
+    <div id="tribute-info">
+        <center><h1>Intern Predict</h1></center>
+        <p id="pm">
+            <strong>Overview:</strong> InternPredict is a predictive analytics tool designed to assist organizations in making informed decisions regarding their intern management processes. The tool leverages data-driven insights to predict outcomes in three critical areas:
+        </p>
+        <ul>
+            <li><strong>Attrition:</strong> Predict the likelihood of an intern leaving the organization.</li>
+            <li><strong>Placement:</strong> Assess the likelihood of offering a full-time position to an intern.</li>
+            <li><strong>Lead Conversion:</strong> Predict the success rate of converting potential intern candidates into actual interns.</li>
+        </ul>
+        <p>
+            It is developed using Python and deployed as a web application using the Flask framework, making it accessible, lightweight, and easy to integrate into organizational workflows.
+        </p>
+
+        <h4>Modules and Their Functions:</h4>
+        <h4>Attrition Prediction:</h4>
+        <ul>
+            <li><strong>Purpose:</strong> Predict the likelihood of an intern leaving before completion.</li>
+            <li><strong>Use Case:</strong> Helps HR identify at-risk interns and take proactive measures.</li>
+            <li><strong>Inputs:</strong> Attendance, project performance, feedback, and engagement levels.</li>
+            <li><strong>Output:</strong> A prediction score indicating attrition risk with actionable insights.</li>
+        </ul>
+
+        <h4>Placement Prediction:</h4>
+        <ul>
+            <li><strong>Purpose:</strong> Assess the likelihood of a full-time offer for an intern.</li>
+            <li><strong>Use Case:</strong> Streamlines recruitment processes with data-driven decisions.</li>
+            <li><strong>Inputs:</strong> Project deliverables, skills assessments, and feedback.</li>
+            <li><strong>Output:</strong> A placement probability score with recommendations.</li>
+        </ul>
+
+        <h4>Lead Conversion Prediction:</h4>
+        <ul>
+            <li><strong>Purpose:</strong> Predict success rates for converting potential candidates to interns.</li>
+            <li><strong>Use Case:</strong> Optimizes recruitment strategy for high-potential leads.</li>
+            <li><strong>Inputs:</strong> Academic scores, achievements, and interview performance.</li>
+            <li><strong>Output:</strong> A conversion likelihood score with actionable insights.</li>
+        </ul>
+    </div>
+</div></header>
+{% endblock %}

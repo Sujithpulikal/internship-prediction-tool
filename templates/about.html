@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title%}Lead{% endblock %}
+{% block title %}Lead{% endblock %}
 
-{% block content%}
+{% block content %}
 <!-- Team Container -->
-<link href="{{ url_for('static',filename='css/about.css')}}" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet" />
+<header class="bgimg-1" style="padding-top: 3%;padding-bottom: 3%;" id="home">
 <div class="team-container" id="team">
-    <h2>OUR TEAM</h2>
+    <h2><b>OUR TEAM</b></h2>
     <p>Say hello to the crew - the engine behind our projects!</p>
 
     <!-- Row 1: 4 Images -->
@@ -71,5 +72,5 @@
         </div>
     </div>
 </div>
-
+</header>
 {% endblock %}

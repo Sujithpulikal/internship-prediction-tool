@@ -30,6 +30,9 @@ def placement():
 @app.route("/about")
 def about():
     return render_template("about.html")
+@app.route("/about1")
+def about1():
+    return render_template("about1.html")
 
 @app.route('/confirm', methods=['POST', 'GET'])
 def register():

@@ -13,10 +13,10 @@
         <p class="p1">
             
             {% if q == 1 %}
-            <p class="success">{{ a }} has successfully converted with the {{ c }} course.</p>
-        {% else %}
-        <p class="failure">{{ a }} has not been converted with the {{ c }} course.</p>
-        {% endif %}
+            <p class="success">{{ a }} has successfully completed the {{ c }} course.</p>
+            {% else %}
+            <p class="failure">{{ a }} has not successfully completed the {{ c }} course.</p>
+            {% endif %}
         </p>
         <button class="button2" id="close1">Let's Go</button>
         

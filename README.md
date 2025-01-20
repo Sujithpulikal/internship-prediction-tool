@@ -1,19 +1,25 @@
-Project Title: Intern Prediction
-This project aims to predict placement attrition (whether a student gets placed or not) and lead conversion (whether a lead will convert into a customer) using machine learning algorithms. The project includes the exploration and analysis of three datasets:
+**Project Title: Intern Prediction**
 
-Placement Attrition Dataset – Contains data about students' academic performance and whether they were placed or not.
-Lead Conversion Dataset – Contains data on customer interactions and whether a lead converted into a sale (includes details like interaction history, lead source, etc.).
-Internship Dataset – Focuses on predicting intern success based on skills, previous performance, and other features.
-Key Features:
+This project aims to predict placement attrition (whether a student gets placed or not) and lead conversion (whether a lead will convert into a customer) using machine learning algorithms. The project explores and analyzes three datasets:
 
-Supervised Learning: Applied classification models like Logistic Regression, Decision Trees, and Random Forests for both placement attrition and lead conversion.
-Data Preprocessing: Handling missing data, feature scaling, encoding categorical variables, and feature selection.
-Model Evaluation: Used metrics like accuracy, precision, recall, F1 score, and confusion matrix for model evaluation.
-Cross-Validation: Applied k-fold cross-validation to ensure robustness in model performance.
-Technologies Used:
+1. **Placement Attrition Dataset**: Contains information about students' academic performance and whether they were placed in a job or not.
+2. **Lead Conversion Dataset**: Includes data on customer interactions and whether a lead successfully converted into a sale (e.g., lead source, interaction history).
+3. **Internship Dataset**: Focuses on predicting intern success based on skills, previous performance, and other relevant features.
 
-Python
-Pandas, NumPy
-Scikit-learn
-Matplotlib, Seaborn
-Jupyter Notebooks
+### Key Features:
+- **Supervised Learning**: Applied classification models such as Logistic Regression, Decision Trees, and Random Forests for predicting placement attrition and lead conversion.
+- **Data Preprocessing**: Included steps like handling missing values, feature scaling, encoding categorical variables, and performing feature selection.
+- **Model Evaluation**: Evaluated models using accuracy, precision, recall, F1 score, and confusion matrix metrics.
+- **Cross-Validation**: Used k-fold cross-validation to validate model performance and ensure reliability.
+
+### Technologies Used:
+- **Python**
+- **Pandas, NumPy**
+- **Scikit-learn**
+- **Matplotlib, Seaborn**
+- **Jupyter Notebooks**
+
+### Datasets Overview:
+- **Placement Dataset**: Predicts if a student gets placed or not.
+- **Attrition Dataset**: Predicts if the student has completed the course or not.
+- **Lead Conversion Dataset**: Predicts if a lead will convert based on whether the lead course was taken or not.
